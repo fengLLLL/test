@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 100%;
+            height: 0.8rem;
+            font-size: 0.4rem;
+            background-color: green;
+            text-align: center;
+            line-height: 0.8rem;
+        }
+        /* 设置不同设备的基准值~ rem值 */
+        @media screen and (max-width: 640px) {
+            html {
+                font-size: 100px; /* rem = 100  */
+            }
+            /* 640 高80 字体40 */
+        }
+        @media screen and (max-width: 320px) {
+            html {
+                font-size: 50px; /* rem = 50 */
+            }
+            /* 320 高 40 字体 20*/
+        }
+        /* 问题：所有的设备的高度都是一样的 */
+        /*
+             将来在写移动页面：
+                psd图片：
+                    导航：宽度为： 640px 高度为80px  rem值100px  640px下面的rem值为100px叫做基准值
+                        640px 80px
+                        320px 40px
+                    宽度为：320px  rem值50px
+         */
+    </style>
+</head>
+<body>
+    <div class="box">购物车</div>
+</body>
+</html>
